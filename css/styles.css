@@ -13,6 +13,7 @@
   --light-weight: 300;
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -114,7 +115,7 @@ button, .button {
   padding: 10px;
   border-radius: 3px;
   /*gives the button a bottom border wuth a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba (0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.9s opacity;
 }
 
