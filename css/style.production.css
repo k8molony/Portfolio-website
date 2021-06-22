@@ -304,7 +304,7 @@ button:hover, button:focus,
           animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-#about, #contact-form {
+#about, #contact-form, #contact-email, #contact-telephone, #contact-message {
   text-align: center;
 }
 
