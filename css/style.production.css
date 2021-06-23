@@ -7,21 +7,37 @@
 
 :root {
   /*colors*/
+  --background-color: #eeeeee;
+  --primary-color: #4f1b4f;
+  --primary-color-darker: #361e36;
+  --button-color: #7ca986;
+  --secondary-color: #ccaa5a;
+  --dark-grey: #2b2b2b;
+  --text-color: #51312b;
   /*font-weight:*/
+  --thick-weight: 700;
+  --medium-weight: 500;
+  --light-weight: 300;
 }
+
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+html {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgb(204, 170, 90)));
+  background-image: linear-gradient(#FFFFFF, rgb(204, 170, 90));
+  min-height: 100%
+}
+
 body {
-  background-color: #eeeeee;
   font-family: 'Patrick Hand', cursive;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   font-size: 20px;
   line-height: 1.6;
-  color: #313131;
+  color: var(--text-color);
 }
 
 .page-header {
@@ -30,7 +46,7 @@ body {
   display: flex;
   width: 100%;
   padding: 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 3px dotted var(--text-color);
 }
 
 .page-header__item {
@@ -73,25 +89,25 @@ body {
 
 h1 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: var(--thick-weight);
 }
 
 h2 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: var(--thick-weight);
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--thick-weight);
 }
 
 a {
-  color: #4f1b4f;
+  color: var(--primary-color);
 }
 
 a:visited {
-  color: #361e36;
+  color: var(--primary-color-darker);
 }
 
 a:hover, a:focus {
@@ -101,43 +117,24 @@ a:hover, a:focus {
 
 a:active {
   /* selected link */
-  color: #2b2b2b;
+  color: var(--dark-grey);
 }
 
-button {
+button, .button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
   /*takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (undeerline, etc.) of the button */
-  background-color: #2f6b67;
+  background-color: var(--button-color);
   color: white;
   text-decoration: none;
   /*adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
   /*gives the button a bottom border wuth a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba (0, 0, 0, 0.3);
-  -webkit-transition: 0.9s opacity;
-  transition: 0.9s opacity;
-}
-
-.button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  display: inline-block;
-  /*takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (undeerline, etc.) of the button */
-  background-color: #2f6b67;
-  color: white;
-  text-decoration: none;
-  /*adds spacing to the button */
-  padding: 10px;
-  border-radius: 3px;
-  /*gives the button a bottom border wuth a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba (0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.9s opacity;
   transition: 0.9s opacity;
 }
@@ -151,8 +148,8 @@ button:hover, button:focus,
 }
 
 .button_secondary {
-  background-color: #ccaa5a;
-  color: #2b2b2b;
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
 }
 
 .page-footer {
@@ -182,7 +179,7 @@ button:hover, button:focus,
 }
 
 .grid__item {
-  background-color: #ccaa5a;
+  background-color: var(--secondary-color);
   width: auto;
   min-height: auto;
   margin: 0;
@@ -304,8 +301,13 @@ button:hover, button:focus,
           animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-#about, #contact-form, #contact-email, #contact-telephone, #contact-message {
+#about, .contact-me {
   text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width:250px;
 }
 
 .contact__image {
