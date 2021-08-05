@@ -225,7 +225,7 @@ button:hover, button:focus,
   }
   to {
     transform: translate(100px, 48px);
-  } 
+  }
 }
 
 .cloud-back {
